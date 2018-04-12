@@ -1,35 +1,22 @@
-import java.io.*;
+package src;
+
+import java.util.List;
 
 public class URLShortener {
 
 	public static void main(String[] args) throws Exception {
 		
-		urls();{
-			System.out.println();
-			
-		}
+		ShortenerApp.shorter("www.google.com");
+			System.out.println(ShortenerApp.shorter("www.google.com"));
 
-	}
-	public static String urls() throws Exception {
-
-		String fileName = "UrlsToShortenList.txt";
-
-		FileReader urlToTest = new FileReader(fileName);
-		BufferedReader bufferedReader = new BufferedReader(urlToTest);
-
-		String urlLine;
-		while((urlLine=bufferedReader.readLine())!=null) {
-			
-			return urlLine;
-			
-		}
-		bufferedReader.close();
-		
-		
-		
+//		List<String> urls= ReadFromFile.urls();
+//		for (String element : urls) {
+//			System.out.println(element);
+//		}
 		
 		
 	}
+	
 	
 }
 
