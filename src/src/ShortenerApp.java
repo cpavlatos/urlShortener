@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.glassfish.hk2.utilities.reflection.Constants;
 
 public class ShortenerApp {
