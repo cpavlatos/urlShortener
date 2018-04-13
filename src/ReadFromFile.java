@@ -13,7 +13,7 @@ public class ReadFromFile {
 
 		Scanner urls = new Scanner(new File("UrlsToShortenList.txt"));
 		while (urls.hasNextLine()) {
-			System.out.println(urls.hasNextLine());
+			//System.out.println(urls.hasNextLine());
 			urlArray.add(urls.nextLine());
 			//urls.close();
 		}
