@@ -11,8 +11,7 @@ public class ValidateResponse {
 
 		String getShortUrl = url.getShortUrl();
 		String getLongUrl = url.getLongUrl();
-		URL urlValidate = new URL(getShortUrl);
-		HttpURLConnection urlConnection = (HttpURLConnection) urlValidate.openConnection();
+		HttpURLConnection urlConnection = (HttpURLConnection) new URL(getShortUrl).openConnection();
 		urlConnection.setRequestMethod("GET");
 		urlConnection.setInstanceFollowRedirects(false);
 		HttpURLConnection.setFollowRedirects(false);

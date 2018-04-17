@@ -1,23 +1,25 @@
 package src;
+
 /*
  * Author: Xtos
  */
 import java.util.List;
-import com.rosaloves.bitlyj.Bitly.Provider;
 import com.rosaloves.bitlyj.ShortenedUrl;
-import static com.rosaloves.bitlyj.Bitly.*;
-
+import static com.rosaloves.bitlyj.Bitly.Provider;
+import static com.rosaloves.bitlyj.Bitly.as;
+import static com.rosaloves.bitlyj.Bitly.shorten;
 
 public class URLShortener {
+	private static final String API_USER = "o_1ki0u1sud9"; // constant
+	private static final String API_KEY = "R_f4121ab5e7284f9fabfbef18eb7db250"; // constant
 
 	public static void main(String[] args) throws Exception {
 
 		String siteLine = null;
 
-		List<String> urls = ReadFromFile.urls();
-		// BitlyClient client = new BitlyClient("o_1ki0u1sud9",
-		// "R_f4121ab5e7284f9fabfbef18eb7db250");
-		Provider bit = as("o_1ki0u1sud9", "R_f4121ab5e7284f9fabfbef18eb7db250");
+		ReadFromFile r = new ReadFromFile();
+		List<String> urls = r.urls();
+		Provider bit = as(API_USER, API_KEY);
 
 		for (int i = 0; i < urls.size(); i++) {
 			siteLine = urls.get(i);
